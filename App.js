@@ -10,9 +10,11 @@ import {
   Montserrat_400Regular,
   Montserrat_700Bold
 } from '@expo-google-fonts/montserrat';
+import AppLoading from 'expo-app-loading';
 
 /* Components */
-import Basket from './src/components/Basket';
+import Basket from './src/screens/Basket';
+import mock from './src/mocks/basket';
 
 export default function App() {
   const [fontLoaded] = useFonts({
@@ -21,42 +23,19 @@ export default function App() {
   });
 
   if(!fontLoaded) {
-    return <View style={styles.containerErrorMsg}>
-      <View style={styles.errorMsgBox}>
-        <Text style={styles.errorMsgText}>Ouve algum erro ao carregar as fontes do App, por favor reinicie o App ou entre mais tarde :(</Text>
-      </View>
-    </View>
+    return <AppLoading/>;
   }
-
+  // <Basket {...mock} /> == <Basket top={mock.top} details={mock.details} />
   return (
     <SafeAreaView>
       <StatusBar />
-      <Basket />
+      <Basket {...mock} />
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  containerErrorMsg: {
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  errorMsgBox: {
-    borderRadius: 12,
-    backgroundColor: '#eb4034',
-    padding: 16
-  },
-  errorMsgText: {
-    color: 'white',
-    fontSize: 16,
-    lineHeight: 26
-  }
-});
-
 // Anotações:
 /* 
   StatusBar = É a barra de status do celular no topo, onde vê a bateria, configurações, hora, etc.
-  SafeAreaView = É uma forma de garantir que o conteúdo e os components não ficam sobrepostos no Status Bar.
+  SafeAreaView = É uma forma de garantir que o conteúdo e os components não ficam sobrepostos no Status Bar(Correção específica para iOS).
 */
