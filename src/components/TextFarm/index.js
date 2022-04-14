@@ -1,6 +1,7 @@
 import { Text } from 'react-native';
 
-import styles from './styles';
+// Styles & Components:
+import styles from './style';
 
 export default function TextFarm({ children, style }) {
     let styleText = styles.text;

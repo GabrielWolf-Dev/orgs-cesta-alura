@@ -1,8 +1,9 @@
-import { View, Image, TouchableOpacity } from 'react-native';
+import { View, Image } from 'react-native';
 
 // Styles & Components:
-import styles from './styles';
+import styles from './style';
 import TextFarm from '../../../../components/TextFarm';
+import ButtonFarm from '../../../../components/ButtonFarm';
 
 export default function Details({
     name,
@@ -10,7 +11,7 @@ export default function Details({
     logo,
     description,
     price,
-    button
+    buttonText
 }){
     return(
         <>
@@ -25,13 +26,7 @@ export default function Details({
             <TextFarm style={styles.description}>{description}</TextFarm>
             <TextFarm style={styles.price}>{price}</TextFarm>
 
-            <TouchableOpacity style={styles.button}>
-                <TextFarm style={styles.buttonText}>{button}</TextFarm>
-            </TouchableOpacity>
+            <ButtonFarm>{buttonText}</ButtonFarm>
         </>
     );
 }
-
-/*
-    O componente padrão Button tem estilos padronizados para cada dispositivo Ios e Android e não podemos modificar muito o estilo, então o certo é utilizar algum componente Touchable, ou seja, tocável, no caso é um touch que diminui a opacidade e podemos estilizar do nosso jeito.
-*/

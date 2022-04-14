@@ -1,9 +1,6 @@
 import {
   StatusBar,
   SafeAreaView,
-  StyleSheet,
-  View,
-  Text
 } from 'react-native';
 import {
   useFonts,

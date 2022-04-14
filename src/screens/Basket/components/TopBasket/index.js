@@ -1,7 +1,7 @@
 import { Image } from 'react-native';
 
 // Styles & Components:
-import styles from './styles';
+import styles from './style';
 import TextFarm from '../../../../components/TextFarm';
 
 // Assets:
