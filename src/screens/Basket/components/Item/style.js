@@ -1,18 +1,12 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-    title: {
-        color: '#464646',
-        fontWeight: 'bold',
-        marginTop: 32,
-        fontSize: 20,
-        lineHeight: 32
-    },
     item: {
         flexDirection: 'row',
         borderBottomWidth: 1,
         borderBottomColor: '#ECECEC',
         paddingVertical: 16,
+        marginHorizontal: 16,
         alignItems: 'center'
     },
     img: {

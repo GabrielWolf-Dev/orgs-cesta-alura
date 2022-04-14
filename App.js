@@ -24,7 +24,7 @@ export default function App() {
   }
   // <Basket {...mock} /> == <Basket top={mock.top} details={mock.details} />
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <StatusBar />
       <Basket {...mock} />
     </SafeAreaView>
@@ -35,4 +35,5 @@ export default function App() {
 /* 
   StatusBar = É a barra de status do celular no topo, onde vê a bateria, configurações, hora, etc.
   SafeAreaView = É uma forma de garantir que o conteúdo e os components não ficam sobrepostos no Status Bar(Correção específica para iOS).
+  SafeAreaView style={{ flex: 1 }} = É para garantir que o tamanho do flex seja sempre a da área inteira, prevenindo que a tela passa para baixo por causa do FlatList, além de fazer com que os dados do FlatList só renderize os elementos que estão visívei na tela, conforme se scrolla vai renderizando os outros.
 */
