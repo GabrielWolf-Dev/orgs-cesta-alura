@@ -12,6 +12,7 @@ import AppLoading from 'expo-app-loading';
 /* Components */
 import Basket from './src/screens/Basket';
 import mock from './src/mocks/basket';
+import Home from './src/screens/Home';
 
 export default function App() {
   const [fontLoaded] = useFonts({
@@ -26,7 +27,8 @@ export default function App() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar />
-      <Basket {...mock} />
+      {/* <Basket {...mock} />*/}
+      <Home />
     </SafeAreaView>
   );
 }

@@ -1,5 +1,5 @@
 // Assets:
-import logo from '../../assets/logo.png';
+import logoFarm from '../../assets/logo-farm.png';
 import tomato from '../../assets/fruits/tomato.png';
 import broccoli from '../../assets/fruits/broccoli.png';
 import pumpkin from '../../assets/fruits/pumpkin.png';
@@ -14,7 +14,7 @@ const basket = {
     details: {
         name: "Cesta de Verduras",
         nameFarm: "Jenny Jack Farm",
-        logo,
+        logo: logoFarm,
         description: "Uma cesta com produtos selecionados cuidadozamente da fazenda direto para sua cozinha",
         price: "R$ 40,00",
         buttonText: "Comprar"
